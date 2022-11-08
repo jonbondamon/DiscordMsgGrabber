@@ -1,4 +1,4 @@
-exec(open(r'bot_2\venv\Scripts\activate_this.py').read(), {'__file__': r'bot_2\venv\Scripts\activate_this.py'})
+exec(open(r'sender\venv\Scripts\activate_this.py').read(), {'__file__': r'sender\venv\Scripts\activate_this.py'})
 
 from discord.ext import commands
 import discord, yaml

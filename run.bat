@@ -1,5 +1,5 @@
 
-start python "bot_1\grabber.py"
+start python "grabber\grabber.py"
 ECHO Running program1
-start python "bot_2\sender.py"
+start python "sender\sender.py"
 ECHO Running program2

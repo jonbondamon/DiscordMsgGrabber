@@ -1,4 +1,4 @@
-exec(open(r'bot_1\venv\Scripts\activate_this.py').read(), {'__file__': r'bot_1\venv\Scripts\activate_this.py'})
+exec(open(r'grabber\venv\Scripts\activate_this.py').read(), {'__file__': r'grabber\venv\Scripts\activate_this.py'})
 
 import yaml, discord, os
 from discord_webhook import DiscordEmbed, DiscordWebhook

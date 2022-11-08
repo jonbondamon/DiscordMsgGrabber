@@ -1,4 +1,4 @@
 settings.yml
-settings copy.yml
+settings_template.yml
 reference.py
 reference2.py
