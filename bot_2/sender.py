@@ -1,11 +1,13 @@
+exec(open(r'bot_2\venv\Scripts\activate_this.py').read(), {'__file__': r'bot_2\venv\Scripts\activate_this.py'})
+
 from discord.ext import commands
 import discord, yaml
 
+with open("settings.yml", mode="r") as yaml_file:
+        settings_yaml = yaml.safe_load(yaml_file)
+
 intents =  discord.Intents.all()
 client = commands.Bot(command_prefix='/', intents=intents)
-
-with open("../settings.yml", mode="r") as yaml_file:
-        settings_yaml = yaml.safe_load(yaml_file)
 
 @client.event
 async def on_ready():

@@ -1,10 +1,10 @@
+exec(open(r'bot_1\venv\Scripts\activate_this.py').read(), {'__file__': r'bot_1\venv\Scripts\activate_this.py'})
+
 import yaml, discord, os
 from discord_webhook import DiscordEmbed, DiscordWebhook
 
 with open("settings.yml", mode="r") as yaml_file:
-        settings_yaml = yaml.safe_load(yaml_file)
-
-mention = settings_yaml['mention']
+    settings_yaml = yaml.safe_load(yaml_file)
 
 class MyClient(discord.Client):
 
@@ -40,7 +40,7 @@ def replaceMentions(content):
     content_split = content.split(' ')
     for segment in content_split:
         if segment.find('<@') != -1:
-            segment = mention
+            segment = settings_yaml['mention']
     content_filtered = ''.join(content_split)
     return content_filtered
 
