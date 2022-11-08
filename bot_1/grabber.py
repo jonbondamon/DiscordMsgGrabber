@@ -59,6 +59,8 @@ async def sendMsg(msg, server):
 
     embed.set_author(name=user.name, icon_url=str(pfp))
 
+    first_img = True
+
     if content != '':
 
         content = replaceMentions(content)
@@ -68,9 +70,9 @@ async def sendMsg(msg, server):
         embed.set_timestamp()
         webhook.add_embed(embed=embed)
         embedCounter = embedCounter + 1
+        first_img = False
 
     if images:
-        first_img = True
         for image in images:
             if embedCounter == 10:
                 webhook.execute(remove_embeds=True)
@@ -87,6 +89,8 @@ async def sendMsg(msg, server):
                 embed_img.set_title(image.filename)
                 embed_img.set_url(image.url)
             embed_img.set_color(color=color)
+            embed_img.set_author(name=user.name, icon_url=str(pfp))
+            embed_img.set_timestamp()
             webhook.add_embed(embed=embed_img)
             embedCounter = embedCounter + 1
 
